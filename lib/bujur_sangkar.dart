@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 // import 'package:fluttertoast/fluttertoast.dart';
 
-class HomePage extends StatelessWidget{
+class HomePageBujurSangkar extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -75,40 +75,18 @@ class _BujurSangkarPageState extends State<BujurSangkarPage> {
                       child: Text("Luas"),
                       onPressed: (){
                         if(_formKey.currentState.validate()) {
-                          // hasil = "Luas Sekian";
                           setState(() => hasil = "Luasnya adalah : "
                               +(int.parse(panjangSisiController.text)*int.parse(panjangSisiController.text)).toString());
-                          // Fluttertoast.showToast(
-                          //     msg: ""+(int.parse(panjangSisiController.text)*int.parse(panjangSisiController.text)).toString(),
-                          //     toastLength: Toast.LENGTH_SHORT,
-                          //     gravity: ToastGravity.CENTER,
-                          //     timeInSecForIos: 1,
-                          //     backgroundColor: Colors.green,
-                          //     textColor: Colors.white,
-                          //     fontSize: 16.0
-                          // );
                         }
-                              // (int.parse(panjangSisiController.text)*int.parse(panjangSisiController.text)).toString();
                     },),
                     SizedBox(height: 10,),
                     RaisedButton(
                       child: Text("Keliling"),
                       onPressed: (){
                         if(_formKey.currentState.validate()){
-                          // hasil = "Keliling Sekian";
                           setState(() => hasil = "Kelilingnya adalah : "
                               +(4*int.parse(panjangSisiController.text)).toString());
-                          // Fluttertoast.showToast(
-                          //     msg: ""+(4*int.parse(panjangSisiController.text)).toString(),
-                          //     toastLength: Toast.LENGTH_SHORT,
-                          //     gravity: ToastGravity.CENTER,
-                          //     timeInSecForIos: 1,
-                          //     backgroundColor: Colors.green,
-                          //     textColor: Colors.white,
-                          //     fontSize: 16.0
-                          // );
                         }
-                            // (4*int.parse(panjangSisiController.text)).toString();
                         },),
                     SizedBox(height: 10,),
                     Text(""+hasil)

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_6_flutter_aldi_irsan/bujur_sangkar.dart';
+import 'package:task_6_flutter_aldi_irsan/segitiga.dart';
+import 'package:task_6_flutter_aldi_irsan/persegi_panjang.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Home Page'),
     );
   }
 }
@@ -41,13 +43,29 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
-              child: Text("Persegi"),
+              child: Text("Bujur Sangkar"),
               onPressed: (){
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => BujurSangkarPage())
                 );
               },
-            )
+            ),
+            RaisedButton(
+              child: Text("Segitiga"),
+              onPressed: (){
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => SegitigaSamaSisiPage())
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text("Persegi Panjang"),
+              onPressed: (){
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => PersegiPanjangPage())
+                );
+              },
+            ),
           ],
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
